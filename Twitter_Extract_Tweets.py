@@ -4,10 +4,10 @@ from tweepy import Stream
 import time
 
 
-access_token = "70608445-tKrnN7tpfUcc0bWINCRgENrV5mxuBA2LluoYa1S9T"
-access_token_secret = "EsUX5XymcrDSYdtXb2Q0HOnga7lrto0iBpY2eqAr4JryP"
-consumer_key = "u49FB3bhq0qZGQpKLWhoqV5X4"
-consumer_secret = "Rlpts87JbFJFj0e331ONuIopqYPzgfTpsjbBgYWuxJbsYZgRhC"
+access_token = ""
+access_token_secret = ""
+consumer_key = ""
+consumer_secret = ""
 
 class StdOutListener(StreamListener):    
     def on_data(self, data):
