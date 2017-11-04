@@ -18,11 +18,12 @@ tweets = pd.DataFrame()
 tweets['Tweet_Text'] = map(lambda tweet: tweet['text'],tweets_data)
 tweets['Time_Of_Tweet'] =  map(lambda tweet: tweet['created_at'],tweets_data)
 tweets['Tweet_Location'] =  map(lambda tweet: tweet['place']['name'],tweets_data)
+tweets['Coordinates'] =  map(lambda tweet: tweet['place']['bounding_box'],tweets_data)
 tweets['User_Native'] = map(lambda tweet: tweet['user']['location'],tweets_data)
 tweets['Country'] = map(lambda tweet: tweet['place']['country'] if tweet['place']!= None else None,tweets_data)
 tweets['Language'] = map(lambda tweet: tweet['lang'],tweets_data)
     
-tweets.to_csv("d://DataFiles_Backup//bangalore_8k.csv", encoding='utf-8')
+tweets.to_csv("d://DataFiles_Backup//bangalore_22k.csv", encoding='utf-8')
 
 
 ##tweets_by_lang = tweets['lang'].value_counts()
